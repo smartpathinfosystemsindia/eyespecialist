@@ -1,0 +1,30 @@
+#ifndef EYERE_H
+#define EYEREC_H
+
+#include <QWidget>
+#include <QMap>
+
+QT_BEGIN_NAMESPACE
+class QPushButton;
+class QLabel;
+class QLineEdit;
+class QTextEdit;
+QT_END_NAMESPACE
+
+
+class EyeRecognition
+{
+    Q_OBJECT
+
+public:
+    EyeRecongnition(const char *trainingdir);
+
+public:
+	int faceCount(char *imagfile, char *training);
+	int detectface(char *imagefile);
+
+private:
+	QString strImgName;
+};
+
+#endif
